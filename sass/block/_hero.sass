@@ -1,0 +1,33 @@
+.hero
+    height: 78px
+    &_navigation
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-top: 39px
+        padding-bottom: 14px
+        border-bottom: 1px solid #eaeaea
+    &_logo
+        font-size: 20px
+        font-weight: 700
+        color: #95989a
+    &_menu
+        font-size: 16px
+        &_link
+            position: relative
+            margin-right: 15px
+            &:nth-child(4)
+                margin-right: 0
+            &:after
+                position: absolute
+                display: block
+                content: ''
+                height: 1px
+                width: 0
+                transition: 0.3s
+                border-bottom: 5px solid #fcde29
+                bottom: 0
+                left: 0
+                margin-bottom: -16px
+            &:hover:after
+                width: 100%
