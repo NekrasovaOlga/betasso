@@ -1,16 +1,19 @@
 .nav
-    background:  #f4f4f4
     height: 46px
+    background:  #f4f4f4
     
     &_navigation
         display: flex
         align-items: center
-        justify-content: space-between
+        justify-content: space-around     
+        width: 100%
+        
         
     &_logo
         color: #95989a
         font-weight: 700
         font-style: 16px
+        width: 5%
         margin-right: 40px
     &_menu
         margin: 14px 0
@@ -23,4 +26,19 @@
     &_exit
         text-transform: uppercase
         color: #95989a
-    
+
+@media (max-width: 1000px)
+    .nav
+        width: 100%
+        &_navigation
+            display: flex
+            justify-content: space-around
+            width: 100%
+        &_logo
+            width: 5%
+            margin-right: 5%
+            margin-left: 2%
+        &_menu
+            width: 78% 
+        &_exit
+            width: 10%

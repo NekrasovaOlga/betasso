@@ -7,7 +7,8 @@ body {
 }
 
 body .content {
-  width: 1105px;
+  max-width: 1105px;
+  width: 100%;
   margin: auto;
 }
 
@@ -16,9 +17,18 @@ a {
   color: #272727;
 }
 
+@media (max-width: 1000px) {
+  .content {
+    max-width: 900px;
+    width: 100%;
+    font-size: 14px;
+    margin: auto;
+  }
+}
+
 .nav {
-  background: #f4f4f4;
   height: 46px;
+  background: #f4f4f4;
 }
 
 .nav_navigation {
@@ -28,15 +38,16 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
 }
 
 .nav_logo {
   color: #95989a;
   font-weight: 700;
   font-style: 16px;
+  width: 5%;
   margin-right: 40px;
 }
 
@@ -55,6 +66,31 @@ a {
 .nav_exit {
   text-transform: uppercase;
   color: #95989a;
+}
+
+@media (max-width: 1000px) {
+  .nav {
+    width: 100%;
+  }
+  .nav_navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+  }
+  .nav_logo {
+    width: 5%;
+    margin-right: 5%;
+    margin-left: 2%;
+  }
+  .nav_menu {
+    width: 78%;
+  }
+  .nav_exit {
+    width: 10%;
+  }
 }
 
 footer {
@@ -186,6 +222,37 @@ footer {
 .text {
   margin-top: 39px;
   margin-left: 44px;
+}
+
+@media (max-width: 1000px) {
+  .hero {
+    width: 100%;
+  }
+  .hero_navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .hero_logo {
+    margin-left: 2%;
+  }
+  .hero_menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-right: 2%;
+  }
 }
 
 .section {

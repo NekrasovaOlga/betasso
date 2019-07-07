@@ -6,9 +6,17 @@ body
  font-weight: 400
 
  .content
-     width: 1105px
+     max-width: 1105px
+     width: 100%
      margin: auto
 
 a
     text-decoration: none
     color: #272727
+
+@media (max-width: 1000px)
+ .content
+    max-width: 900px
+    width: 100%
+    font-size: 14px
+    margin: auto
